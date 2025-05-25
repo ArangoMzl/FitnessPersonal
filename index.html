@@ -206,70 +206,6 @@
             margin-bottom: 15px;
         }
 
-        .video-container {
-            width: 100%;
-            max-width: 500px;
-            margin: 20px auto;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .exercise-video {
-            width: 100%;
-            height: auto;
-            display: block;
-            background: #f0f0f0;
-            border-radius: 15px;
-        }
-
-        .video-placeholder {
-            width: 100%;
-            height: 280px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            text-align: center;
-            border-radius: 15px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .video-placeholder::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: repeating-linear-gradient(45deg,
-                    rgba(255, 255, 255, 0.1) 0px,
-                    rgba(255, 255, 255, 0.1) 20px,
-                    transparent 20px,
-                    transparent 40px);
-            animation: moveStripes 2s linear infinite;
-        }
-
-        @keyframes moveStripes {
-            0% {
-                transform: translateX(-40px);
-            }
-
-            100% {
-                transform: translateX(0px);
-            }
-        }
-
-        .play-icon {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            opacity: 0.8;
-        }
-
         .progress-bar {
             width: 100%;
             height: 8px;
@@ -400,29 +336,13 @@
             border-left: 4px solid #667eea;
         }
 
-        .difficulty-badge {
-            display: inline-block;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .difficulty-beginner {
-            background: #d4edda;
-            color: #155724;
-        }
-
-        .difficulty-intermediate {
-            background: #fff3cd;
-            color: #856404;
-        }
-
-        .difficulty-advanced {
-            background: #f8d7da;
-            color: #721c24;
+        .video-container {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
         }
 
         @media (max-width: 768px) {
@@ -441,335 +361,6 @@
             .modal-content {
                 padding: 20px;
                 margin: 10px;
-            }
-        }
-
-        /* Estilos para videos de ejercicios */
-        .video-container {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 15px;
-            margin: 20px 0;
-            text-align: center;
-            border: 2px solid #667eea;
-        }
-
-        .exercise-video {
-            width: 100%;
-            max-width: 500px;
-            height: 300px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            margin: 0 auto;
-            display: block;
-        }
-
-        .video-placeholder {
-            width: 100%;
-            max-width: 500px;
-            height: 300px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            color: white;
-            margin: 0 auto;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .video-placeholder .play-icon {
-            font-size: 60px;
-            margin-bottom: 10px;
-            opacity: 0.8;
-        }
-
-        .video-placeholder .video-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            text-align: center;
-            padding: 0 20px;
-        }
-
-        .video-controls {
-            margin-top: 15px;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .video-btn {
-            background: #667eea;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .video-btn:hover {
-            background: #5a6fd8;
-            transform: translateY(-2px);
-        }
-
-        .video-info-text {
-            color: #667eea;
-            font-size: 1rem;
-            margin-top: 10px;
-            font-weight: 500;
-        }
-
-        /* Contenedor mejorado para videos embebidos */
-        .video-embed-container {
-            position: relative;
-            width: 100%;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .video-link {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #667eea;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            margin: 10px 0;
-            transition: all 0.3s ease;
-        }
-
-        .video-link:hover {
-            background: #5a6fd8;
-            transform: translateY(-2px);
-        }
-
-        .video-fallback {
-            text-align: center;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            border: 2px dashed #ddd;
-        }
-
-        /* Animaciones de stick-figure como fallback */
-        .video-placeholder.enhanced {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .placeholder-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .exercise-animation {
-            margin: 20px 0;
-            height: 120px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .stick-figure {
-            width: 60px;
-            height: 100px;
-            position: relative;
-            animation: var(--animation-name, bounce) 2s infinite;
-        }
-
-        .head {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: white;
-            margin: 0 auto 5px;
-        }
-
-        .body {
-            width: 4px;
-            height: 50px;
-            background: white;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .arms {
-            position: absolute;
-            top: 15px;
-            left: -15px;
-            width: 34px;
-            height: 3px;
-            background: white;
-            border-radius: 2px;
-            animation: inherit;
-        }
-
-        .legs {
-            position: absolute;
-            bottom: -25px;
-            left: -8px;
-            width: 20px;
-            height: 25px;
-        }
-
-        .leg {
-            position: absolute;
-            width: 3px;
-            height: 25px;
-            background: white;
-            border-radius: 2px;
-            transform-origin: top center;
-        }
-
-        .leg.left {
-            left: 0;
-        }
-
-        .leg.right {
-            right: 0;
-        }
-
-        /* Animaciones específicas */
-        .pushup-animation .stick-figure {
-            --animation-name: pushupMove;
-        }
-
-        @keyframes pushupMove {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(10px);
-            }
-        }
-
-        .squat-animation .stick-figure {
-            --animation-name: squatMove;
-        }
-
-        @keyframes squatMove {
-
-            0%,
-            100% {
-                transform: scaleY(1);
-            }
-
-            50% {
-                transform: scaleY(0.8) translateY(10px);
-            }
-        }
-
-        .plank-animation .stick-figure {
-            --animation-name: plankHold;
-            transform: rotate(0deg);
-        }
-
-        @keyframes plankHold {
-
-            0%,
-            100% {
-                transform: rotate(0deg);
-            }
-
-            25% {
-                transform: rotate(-2deg);
-            }
-
-            75% {
-                transform: rotate(2deg);
-            }
-        }
-
-        .burpee-animation .stick-figure {
-            --animation-name: burpeeMove;
-        }
-
-        @keyframes burpeeMove {
-            0% {
-                transform: translateY(0) scaleY(1);
-            }
-
-            25% {
-                transform: translateY(15px) scaleY(0.6);
-            }
-
-            50% {
-                transform: translateY(10px) scaleY(0.8);
-            }
-
-            75% {
-                transform: translateY(-5px) scaleY(1.1);
-            }
-
-            100% {
-                transform: translateY(0) scaleY(1);
-            }
-        }
-
-        .lunge-animation .legs .leg.left {
-            animation: lungeLeft 2s infinite;
-        }
-
-        .lunge-animation .legs .leg.right {
-            animation: lungeRight 2s infinite;
-        }
-
-        @keyframes lungeLeft {
-
-            0%,
-            100% {
-                transform: rotate(0deg);
-            }
-
-            50% {
-                transform: rotate(-20deg);
-            }
-        }
-
-        @keyframes lungeRight {
-
-            0%,
-            100% {
-                transform: rotate(0deg);
-            }
-
-            50% {
-                transform: rotate(20deg);
-            }
-        }
-
-        .arm-raise-animation .arms {
-            animation: armRaise 2s infinite;
-        }
-
-        @keyframes armRaise {
-
-            0%,
-            100% {
-                transform: rotate(0deg);
-            }
-
-            50% {
-                transform: rotate(-30deg);
-            }
-        }
-
-        @keyframes bounce {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-5px);
             }
         }
     </style>
@@ -900,7 +491,6 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <h3 id="modalExerciseName"></h3>
-            <div id="modalDifficulty"></div>
             <div id="modalVideoContainer" class="video-container"></div>
             <div id="modalExerciseDescription" class="video-info"></div>
             <div id="modalExerciseTips" class="video-info"></div>
@@ -915,8 +505,7 @@
                     sets: "3 series",
                     reps: "8-12 repeticiones",
                     rest: "60 segundos",
-                    animation: "pushup",
-                    videoUrl: "https://www.youtube.com/watch?v=R08gYyypGto", // Video corto y claro 45 seg
+                    gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Knee-Push-up.gif",
                     description: "Versión modificada de las flexiones tradicionales, apoyando las rodillas en el suelo para reducir la dificultad mientras desarrollas fuerza en el pecho, hombros y tríceps.",
                     tips: "Mantén la espalda recta formando una línea desde la cabeza hasta las rodillas. Baja el pecho hasta casi tocar el suelo y sube de forma controlada. No dejes que las caderas se hundan.",
                     muscles: "Pecho, hombros, tríceps, core",
@@ -927,8 +516,7 @@
                     sets: "3 series",
                     reps: "10-15 repeticiones",
                     rest: "45 segundos",
-                    animation: "squat",
-                    videoUrl: "https://www.youtube.com/watch?v=YaXPRqUwItQ", // Video corto sentadilla básica 35 seg
+                    gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Bodyweight-Squat.gif",
                     description: "Sentadillas realizadas con apoyo de una silla o pared para mantener el equilibrio y aprender la técnica correcta.",
                     tips: "Baja como si fueras a sentarte en una silla invisible. Mantén las rodillas alineadas con los pies y el peso en los talones. No dejes que las rodillas sobrepasen las puntas de los pies.",
                     muscles: "Cuádriceps, glúteos, isquiotibiales",
@@ -939,8 +527,7 @@
                     sets: "3 series",
                     reps: "20-30 segundos",
                     rest: "60 segundos",
-                    animation: "plank",
-                    videoUrl: "https://www.youtube.com/watch?v=44ScXWFaVBs", // Video plancha rodillas 30 seg
+                    gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Knee-Plank.gif",
                     description: "Ejercicio isométrico para fortalecer el core, realizado desde las rodillas para reducir la intensidad.",
                     tips: "Mantén el cuerpo en línea recta desde la cabeza hasta las rodillas. No dejes que las caderas suban o bajen. Respira de manera constante y mantén el abdomen contraído.",
                     muscles: "Core, hombros, espalda",
@@ -951,8 +538,7 @@
                     sets: "3 series",
                     reps: "8-10 por pierna",
                     rest: "45 segundos",
-                    animation: "lunge",
-                    videoUrl: "https://www.youtube.com/watch?v=QOVaHwm-Q6U", // Video estocadas estáticas 40 seg
+                    gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Static-Lunge.gif",
                     description: "Ejercicio unilateral para trabajar piernas y glúteos, manteniendo una posición fija para mejorar el equilibrio.",
                     tips: "Mantén el torso erguido y el peso distribuido entre ambas piernas. La rodilla trasera debe casi tocar el suelo. Alterna las piernas después de completar todas las repeticiones.",
                     muscles: "Cuádriceps, glúteos, isquiotibiales, gemelos",
@@ -963,8 +549,7 @@
                     sets: "3 series",
                     reps: "12-15 repeticiones",
                     rest: "30 segundos",
-                    animation: "arm-raise",
-                    videoUrl: "https://www.youtube.com/watch?v=3VcKaXpzqRo", // Video elevaciones laterales 25 seg
+                    gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Lateral-Raise.gif",
                     description: "Ejercicio para fortalecer y tonificar los hombros mediante elevaciones laterales y frontales.",
                     tips: "Mantén los brazos ligeramente flexionados durante todo el movimiento. Realiza el ejercicio de forma controlada, sin usar impulso. Puedes usar botellas de agua como peso adicional.",
                     muscles: "Hombros, tríceps",
@@ -977,8 +562,7 @@
                     sets: "4 series",
                     reps: "12-18 repeticiones",
                     rest: "60 segundos",
-                    animation: "pushup",
-                    videoUrl: "https://www.youtube.com/watch?v=bt5b9x9N0KU", // Video flexiones perfectas 30 seg
+                    gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Push-up.gif",
                     description: "Flexiones completas manteniendo el cuerpo recto desde la cabeza hasta los pies, ejercicio fundamental para el tren superior.",
                     tips: "Mantén el core activado y el cuerpo en línea recta. Baja hasta que el pecho casi toque el suelo. Las manos deben estar alineadas con los hombros.",
                     muscles: "Pecho, hombros, tríceps, core",
@@ -989,8 +573,7 @@
                     sets: "4 series",
                     reps: "15-20 repeticiones",
                     rest: "45 segundos",
-                    animation: "squat",
-                    videoUrl: "https://www.youtube.com/watch?v=aclHkVaku9U", // Video sentadilla perfecta 45 seg
+                    gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Bodyweight-Squat.gif",
                     description: "Sentadillas profundas sin apoyo, activando completamente glúteos y cuádriceps para máximo desarrollo muscular.",
                     tips: "Baja hasta que los muslos estén paralelos al suelo o más profundo si la movilidad lo permite. Empuja con los talones al subir y mantén el pecho erguido.",
                     muscles: "Cuádriceps, glúteos, isquiotibiales, gemelos",
@@ -1001,8 +584,7 @@
                     sets: "3 series",
                     reps: "45-60 segundos",
                     rest: "60 segundos",
-                    animation: "plank",
-                    videoUrl: "https://www.youtube.com/watch?v=pSHjTRCQxIw", // Video plancha técnica perfecta 35 seg
+                    gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Forearm-Plank.gif",
                     description: "Plancha en posición completa, apoyando antebrazos y pies para un desafío completo del core.",
                     tips: "Mantén el cuerpo completamente recto como una tabla. No dejes que las caderas suban o bajen. Respira de manera controlada durante toda la duración.",
                     muscles: "Core, hombros, espalda, glúteos",
@@ -1013,8 +595,7 @@
                     sets: "3 series",
                     reps: "8-12 repeticiones",
                     rest: "90 segundos",
-                    animation: "burpee",
-                    videoUrl: "https://www.youtube.com/watch?v=qLBImHhCXSw", // Video burpee básico 35 seg
+                    gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Burpee.gif",
                     description: "Ejercicio completo que combina sentadilla, plancha y elevación, ideal para cardio y fuerza funcional.",
                     tips: "Realiza cada movimiento de forma controlada y fluida. Puedes omitir el salto final si es necesario. Mantén el core activado durante toda la secuencia.",
                     muscles: "Cuerpo completo, cardiovascular",
@@ -1027,8 +608,7 @@
                     sets: "4 series",
                     reps: "10-15 repeticiones",
                     rest: "75 segundos",
-                    animation: "pushup",
-                    videoUrl: "https://www.youtube.com/watch?v=Jb5tBJcFbDs", // Video flexiones diamante 25 seg
+                    gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Diamond-Push-up.gif",
                     description: "Flexiones avanzadas con las manos formando un diamante, enfoque intenso en tríceps y pecho interno.",
                     tips: "Forma un diamante con los dedos índices y pulgares. Mantén los codos cerca del cuerpo durante todo el movimiento. Este ejercicio es significativamente más desafiante.",
                     muscles: "Tríceps, pecho interno, hombros",
@@ -1039,8 +619,7 @@
                     sets: "4 series",
                     reps: "12-18 repeticiones",
                     rest: "60 segundos",
-                    animation: "jump-squat",
-                    videoUrl: "https://www.youtube.com/watch?v=CVaEhXotL7M", // Video jump squat técnica 30 seg
+                    gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Jump-Squat.gif",
                     description: "Sentadillas explosivas que terminan con un salto vertical, excelentes para potencia y acondicionamiento.",
                     tips: "Aterriza suavemente con la punta de los pies primero, luego el talón. Inmediatamente baja a la siguiente sentadilla. Mantén el control en todo momento.",
                     muscles: "Cuádriceps, glúteos, pantorrillas, potencia",
@@ -1051,8 +630,7 @@
                     sets: "3 series",
                     reps: "60-90 segundos",
                     rest: "75 segundos",
-                    animation: "plank",
-                    videoUrl: "https://www.youtube.com/watch?v=L_xrDAtykMI", // Video plancha up-down 40 seg
+                    gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Plank-Up-Down.gif",
                     description: "Plancha dinámica alternando entre posición de antebrazos y brazos extendidos para máximo desafío del core.",
                     tips: "Mantén el core estable durante toda la transición. Sube y baja un brazo a la vez de manera controlada. Evita rotar las caderas.",
                     muscles: "Core, hombros, brazos, estabilidad",
@@ -1063,8 +641,7 @@
                     sets: "4 series",
                     reps: "12-20 repeticiones",
                     rest: "120 segundos",
-                    animation: "burpee",
-                    videoUrl: "https://www.youtube.com/watch?v=auBLPXO8Fww", // Video burpee completo técnica
+                    gifUrl: "https://fitnessprogramer.com/wp-content/uploads/2021/02/Burpee.gif",
                     description: "Burpees completos con flexión y salto explosivo, el ejercicio definitivo para acondicionamiento total.",
                     tips: "Incluye una flexión completa en la posición de plancha y un salto explosivo al final. Mantén un ritmo constante pero controlado durante toda la serie.",
                     muscles: "Cuerpo completo, cardiovascular, potencia",
@@ -1130,16 +707,12 @@
         document.getElementById('healthForm').addEventListener('submit', function (e) {
             e.preventDefault();
 
-            console.log('Formulario enviado'); // Debug
-
             const age = parseInt(document.getElementById('age').value);
             const gender = document.getElementById('gender').value;
             const height = parseInt(document.getElementById('height').value);
             const weight = parseFloat(document.getElementById('weight').value);
             const activity = document.getElementById('activity').value;
             const goal = document.getElementById('goal').value;
-
-            console.log('Datos:', { age, gender, height, weight, activity, goal }); // Debug
 
             // Validar que todos los campos estén llenos
             if (!age || !gender || !height || !weight || !activity || !goal) {
@@ -1189,7 +762,6 @@
             const dailyCalories = bmr * activityMultipliers[activity];
 
             // Mostrar resultados
-            console.log('Mostrando resultados...'); // Debug
             document.getElementById('bmiValue').textContent = bmi.toFixed(1);
             document.getElementById('bmrValue').textContent = Math.round(bmr);
             document.getElementById('caloriesValue').textContent = Math.round(dailyCalories);
@@ -1202,12 +774,10 @@
             `;
 
             // Generar plan de entrenamiento
-            console.log('Generando plan de entrenamiento...'); // Debug
             generateWorkoutPlan(bmi, activity, goal, age);
 
             const resultsDiv = document.getElementById('results');
             resultsDiv.style.display = 'block';
-            console.log('Resultados mostrados'); // Debug
 
             // Scroll suave a los resultados
             setTimeout(() => {
@@ -1216,8 +786,6 @@
         });
 
         function generateWorkoutPlan(bmi, activity, goal, age) {
-            console.log('Función generateWorkoutPlan llamada con:', { bmi, activity, goal, age }); // Debug
-
             let level;
 
             // Determinar nivel basado en IMC, actividad y edad
@@ -1228,8 +796,6 @@
             } else {
                 level = 'advanced';
             }
-
-            console.log('Nivel determinado:', level); // Debug
 
             const workoutExercises = exercises[level];
             const planDiv = document.getElementById('workoutPlan');
@@ -1248,10 +814,10 @@
 
             workoutExercises.forEach((exercise, index) => {
                 planHTML += `
-                    <div class="exercise-card" onclick="showExerciseDetail('${exercise.name}', '${exercise.videoUrl}', \`${exercise.description}\`, \`${exercise.tips}\`)">
+                    <div class="exercise-card" onclick="showExerciseDetail('${exercise.name}', '${exercise.gifUrl}', \`${exercise.description}\`, \`${exercise.tips}\`)">
                         <div class="exercise-header">
                             <div class="exercise-name">${exercise.name}</div>
-                            <div style="color: #667eea; font-weight: bold;">Ver Video</div>
+                            <div style="color: #667eea; font-weight: bold;">Ver Demostración</div>
                         </div>
                         <div class="exercise-details">
                             <strong>Series:</strong> ${exercise.sets} | 
@@ -1259,7 +825,7 @@
                             <strong>Descanso:</strong> ${exercise.rest}
                         </div>
                         <div style="color: #666; font-size: 0.9rem;">
-                            Músculos: ${exercise.muscles} | Haz clic para ver el video demostrativo
+                            Músculos: ${exercise.muscles} | Haz clic para ver la demostración en GIF
                         </div>
                     </div>
                 `;
@@ -1279,10 +845,9 @@
             `;
 
             planDiv.innerHTML = planHTML;
-            console.log('Plan HTML generado y aplicado'); // Debug
         }
 
-        function showExerciseDetail(name, videoUrl, description, tips) {
+        function showExerciseDetail(name, gifUrl, description, tips) {
             const modal = document.getElementById('exerciseModal');
             const modalName = document.getElementById('modalExerciseName');
             const modalVideoContainer = document.getElementById('modalVideoContainer');
@@ -1293,107 +858,49 @@
             modalDescription.innerHTML = `<p><strong>Descripción:</strong> ${description}</p>`;
             modalTips.innerHTML = `<p><strong>Consejos:</strong> ${tips}</p>`;
 
-            // Crear video con fallback a placeholder mejorado
-            if (videoUrl && (videoUrl.includes('youtube.com') || videoUrl.includes('youtu.be'))) {
-                // Para videos de YouTube
-                const videoId = videoUrl.includes('youtu.be') ?
-                    videoUrl.split('youtu.be/')[1].split('?')[0] :
-                    videoUrl.split('v=')[1]?.split('&')[0];
-
-                modalVideoContainer.innerHTML = `
-                    <div class="video-embed-container">
-                        <iframe 
-                            class="exercise-video" 
-                            src="https://www.youtube.com/embed/${videoId}?autoplay=0&rel=0&modestbranding=1&showinfo=0&fs=1&cc_load_policy=0&iv_load_policy=3&start=0&end=60" 
-                            frameborder="0" 
-                            allowfullscreen
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            loading="lazy"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        </iframe>
-                        <div class="video-fallback" style="display: none;">
-                            <p>❌ Error al cargar el video embebido</p>
-                            <a href="${videoUrl}" target="_blank" class="video-link">
-                                🔗 Ver en YouTube (${Math.floor(Math.random() * 2 + 1)} min)
-                            </a>
-                            <div class="exercise-animation ${getAnimationClass(name)}">
-                                <div class="stick-figure">
-                                    <div class="head"></div>
-                                    <div class="body">
-                                        <div class="arms"></div>
-                                        <div class="legs">
-                                            <div class="leg left"></div>
-                                            <div class="leg right"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <p style="font-size: 0.9rem; margin-top: 10px; color: #666;">
-                                📱 Algunos videos requieren abrirse directamente en YouTube por políticas de la plataforma
-                            </p>
-                        </div>
+            // Crear contenedor con GIF como demostración principal
+            modalVideoContainer.innerHTML = `
+                <div class="gif-demo-container" style="width: 100%; max-width: 450px; margin: 20px auto; background: linear-gradient(135deg, #f8f9fa, #e9ecef); border-radius: 15px; padding: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border: 2px solid #667eea;">
+                    <div class="gif-demo-title" style="text-align: center; font-size: 1.1rem; font-weight: 600; color: #667eea; margin-bottom: 15px;">
+                        🎯 Demostración del Ejercicio: ${name}
                     </div>
-                `;
-
-                // Detectar si el iframe no se carga después de 3 segundos
-                setTimeout(() => {
-                    const iframe = modalVideoContainer.querySelector('iframe');
-                    const fallback = modalVideoContainer.querySelector('.video-fallback');
-
-                    if (iframe && !iframe.contentWindow) {
-                        iframe.style.display = 'none';
-                        fallback.style.display = 'block';
-                    }
-                }, 3000);
-            } else if (videoUrl && !videoUrl.includes('sample-videos.com') && videoUrl !== 'placeholder') {
-                // Para videos MP4 reales
-                modalVideoContainer.innerHTML = `
-                    <video class="exercise-video" controls preload="metadata">
-                        <source src="${videoUrl}" type="video/mp4">
-                        Tu navegador no soporta el elemento video.
-                    </video>
-                `;
-            } else {
-                // Placeholder mejorado con animación CSS
-                modalVideoContainer.innerHTML = `
-                    <div class="video-placeholder enhanced">
-                        <div class="placeholder-content">
-                            <div class="play-icon">▶️</div>
-                            <h4>Demostración: ${name}</h4>
-                            <p>Video próximamente disponible</p>
-                            <div class="exercise-animation ${getAnimationClass(name)}">
-                                <div class="stick-figure">
-                                    <div class="head"></div>
-                                    <div class="body">
-                                        <div class="arms"></div>
-                                        <div class="legs">
-                                            <div class="leg left"></div>
-                                            <div class="leg right"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <p style="font-size: 0.9rem; margin-top: 10px;">
-                                Mientras tanto, sigue la descripción y consejos detallados
-                            </p>
-                        </div>
+                    <div class="exercise-gif-container" style="text-align: center; background: #fff; border-radius: 10px; padding: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                        <img src="${gifUrl}" 
+                             alt="Demostración de ${name}" 
+                             class="exercise-gif" 
+                             style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);"
+                             onerror="this.style.display='none'; this.parentNode.innerHTML='<div style=\\'padding: 40px; text-align: center; color: #999;\\'>GIF no disponible<br>📋 Sigue las instrucciones detalladas</div>';">
                     </div>
-                `;
-            }
+                    <div class="gif-instructions" style="margin-top: 15px; padding: 10px; background: rgba(102, 126, 234, 0.1); border-radius: 8px; font-size: 0.9rem; color: #667eea; text-align: center;">
+                        <strong>💡 Observa la técnica:</strong> ${getExerciseInstructions(name)}
+                    </div>
+                    <p style="color: #666; font-size: 0.85rem; margin-top: 10px; text-align: center; font-style: italic;">
+                        💪 Sigue el ritmo y la forma mostrada en la demostración
+                    </p>
+                </div>
+            `;
 
             modal.style.display = 'block';
         }
 
-        // Función auxiliar para determinar la clase de animación
-        function getAnimationClass(exerciseName) {
-            const name = exerciseName.toLowerCase();
-            if (name.includes('flexion') || name.includes('pushup')) return 'pushup-animation';
-            if (name.includes('sentadilla') || name.includes('squat')) return 'squat-animation';
-            if (name.includes('plancha') || name.includes('plank')) return 'plank-animation';
-            if (name.includes('estocada') || name.includes('lunge')) return 'lunge-animation';
-            if (name.includes('burpee')) return 'burpee-animation';
-            if (name.includes('elevacion') || name.includes('brazo')) return 'arm-raise-animation';
-            return 'default-animation';
+        // Función para obtener instrucciones específicas del ejercicio
+        function getExerciseInstructions(exerciseName) {
+            const instructions = {
+                "Flexiones de Rodillas": "Mantén el cuerpo recto • Baja y sube controladamente",
+                "Flexiones Tradicionales": "Cuerpo completamente recto • Pecho al suelo",
+                "Flexiones Diamante": "Manos en forma de diamante • Enfoque en tríceps",
+                "Sentadillas Asistidas": "Baja como sentándote • Rodillas alineadas con pies",
+                "Sentadillas Completas": "Muslos paralelos al suelo • Empuja con talones",
+                "Sentadillas con Salto": "Aterrizaje suave • Transición inmediata",
+                "Plancha en Rodillas": "Línea recta cabeza-rodillas • Core activado",
+                "Plancha Completa": "Cuerpo como tabla rígida • Respiración controlada",
+                "Plancha con Elevación": "Transición controlada • Sin rotar caderas",
+                "Estocadas Estáticas": "Torso erguido • Peso distribuido",
+                "Burpees Modificados": "Movimiento fluido • Core siempre activo",
+                "Burpees Completos": "Flexión completa • Salto explosivo",
+                "Elevaciones de Brazos": "Brazos ligeramente flexionados • Sin impulso"
+            };
+            return instructions[exerciseName] || "Mantén buena forma • Movimiento controlado";
         }
 
         // Cerrar modal
